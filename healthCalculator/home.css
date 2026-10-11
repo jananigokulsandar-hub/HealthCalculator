@@ -284,3 +284,5 @@
 
 .home footer { margin-top: 56px; padding-bottom: 12px; }
 .home footer a { color: var(--primary); text-decoration: none; font-weight: 600; }
+.text-link { color: var(--primary); font-weight: 600; text-decoration: none; }
+.text-link:hover { text-decoration: underline; }
