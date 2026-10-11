@@ -1,0 +1,22 @@
+# Netlify configuration for a static HTML/CSS/JS site (no build step)
+
+[build]
+  # The site is served straight from the repository root.
+  # If your repo keeps these files inside a subfolder (e.g. "healthCalculator"),
+  # change this to that folder name.
+  publish = "."
+
+# Basic security headers for every page
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+# Cache images for a week
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
